@@ -4,4 +4,4 @@ __pycache__/
 *.zip
 output/
 .env
-data/
+HW3/data/
