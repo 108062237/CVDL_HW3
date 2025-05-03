@@ -1,7 +1,0 @@
-# .gitignore
-__pycache__/
-*.pth
-*.zip
-output/
-.env
-HW3/data/
