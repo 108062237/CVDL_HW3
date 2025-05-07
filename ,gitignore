@@ -1,0 +1,8 @@
+# .gitignore
+HW3/__pycache__/
+*.pth
+*.zip
+output/
+.env
+HW3/data/
+HW3/test-results.json

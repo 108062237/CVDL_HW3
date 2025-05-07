@@ -1,16 +1,18 @@
-model:
-  backbone: resnet50
-  pretrained: true
-  num_classes: 5
+MODEL:
+  BACKBONE: resnext101_32x8d  # backbone: resnet50 or resnet101
+  PRETRAINED: true        # use ImageNet pretrained weights
+  NUM_CLASSES: 5          # 4 classes + background
 
-train:
-  batch_size: 1
-  num_epochs: 20
-  learning_rate: 0.005
-  weight_decay: 0.0001
-  step_size: 5
-  gamma: 0.1
+DATA:
+  ROOT_DIR: "data"       # root data directory containing 'train/' and 'test/'
+  VAL_SPLIT: 0.1          # fraction of train set for validation
+  NUM_WORKERS: 4          # DataLoader worker numbers
 
-path:
-  data_dir: ./data
-  checkpoint_dir: ./outputs/checkpoints
+TRAIN:
+  BATCH_SIZE: 2
+  LR: 0.0001
+  EPOCHS: 200
+  WEIGHT_DECAY: 1e-4
+
+TEST:
+  BATCH_SIZE: 1
